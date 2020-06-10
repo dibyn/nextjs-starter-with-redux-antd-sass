@@ -1,0 +1,55 @@
+{
+  "name": "nextjx-starter-pack-with-redux",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server/index.js",
+    "export": "next export",
+    "prettier": "prettier --write '**/*.js{x,}'",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "antd": "^4.3.3",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "next": "^9.4.4",
+    "next-redux-wrapper": "^6.0.2",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.26.8"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
+    "babel-jest": "^24.9.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "jest": "^24.9.0",
+    "prettier": "^1.14.2",
+    "redux-devtools-extension": "^2.13.8",
+    "webpack-bundle-analyzer": "^3.8.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./setups/index.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/(build|docs|node_modules)/"
+    ]
+  }
+}
